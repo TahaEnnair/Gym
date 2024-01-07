@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* start header */
+.header {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 999;
+    margin-top: 10px;
+}
+.header i {
+    display: none;
+}
+.header .logo span{
+    color: red;
+}
+
+.header ul {
+    display: flex;
+    font-size: 15px;
+    list-style: none;
+}
+
+.header ul li {
+    padding: 10px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.header ul li a:hover {
+    color: red;
+}
+
+@media(max-width:767px) {
+    .header ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        background-color: red;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .header i {
+        display: block;
+        font-size: 20px;
+        color:white;
+    }
+
+    .header i:hover+ul {
+        display: block;
+    }
+
+    .header ul:hover {
+        display: block;
+    }
+
+
+}
+/* end header */
+
+/* start landing */
+.landing{
+    background:url(../images/pexels-anush-gorak-1229356.jpg);
+    opacity: 100%;
+    height: calc(100vh - 70px);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.landing .text h1{
+    font-size: 50px;
+    color: white;
+}
+.landing .text p{
+    font-size: 20px;
+    margin-top: -10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.landing .text span{
+    color: red;
+}
+/* end landing */
+
+/* start about */
+.about-parent h1 {
+    color: red;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 35px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 10px;
+    justify-content: center;
+    padding: 0 10px 10px 10px;
+}
+
+.about .text{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25px;
+}
+.about .text p{
+    text-align:center;
+    font-size: 15px;
+    font-weight: 200;
+}
+@media(max-width:767px){
+   .about iframe{
+    width: 100%;
+   }
+}
+/* end about */
+
+/* start services */
+.services-parent h1 {
+    color: red;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 35px;
+}
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    text-align: center;
+    gap: 20px;
+}
+.ser img{
+    width: 300px;
+    height: 300px;
+}
+.ser h4{
+    font-weight: bolder;
+    color: #F15A59;
+    font-size: 15px;
+}
+.ser p{
+    font-size: 9px;
+    color: white;
+}
+/* end services */
+/* start membership */
+.membership-parent h1 {
+    color: red;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 35px;
+}
+.membership{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , 350px);
+    justify-content: center;
+    gap: 10px;  
+    text-align: center;
+}
+.membership .card h2{
+    color: #F15A59;
+}
+.membership .card{
+    border: white 1px solid;
+    padding: 20px;
+    background-image: url(/images/aqua.jpg);
+    border-radius: 10px;
+}
+.membership .card span{
+    color: #F15A59;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* end membership */
+/* start contact */
+.contact-parent h1 {
+    color: red;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 25px;
+}
+.media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width:767px){
+    .contact .media{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+.media a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+}
+.media i{
+    color: azure;
+    font-size: 15px;
+}
+
+.facebook i{
+    color:blue;
+}
+.instagram i{
+    color: #EB8AE5;
+}
+.gmail i{
+    color: #EA4335;
+}
+/* end contact */
+/* start footer */
+.footer{
+    border: rgb(36, 34, 34) solid 1px;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.footer p i{
+    color: red;
+}
+/* end footer */
